@@ -4,6 +4,7 @@ target = int(input())
 tamanho = len(nums)
 pos = 0
 
-for i in range(0, tamanho):
-    for j in range(tamanho,0):
-        print(i,j)
+for i in range(tamanho -1):
+    for j in range(i+1, tamanho):
+        if nums[i] + nums[j] == target:
+            print("Posição {} e posição {}".format(nums[i],nums[j]))
