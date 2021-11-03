@@ -1,1 +1,1 @@
-# Questions for competitive programming!
+# Training for competitive programming!
