@@ -1,34 +1,38 @@
 #include <iostream>
 #include <vector>
+
 using namespace std;
 
 int main(){
 
        vector<int> listinha;
-       int inicio, auxiliar, fim, valor;
-       int tamanho;
+       int tamanho,valor, auxiliar, inicio, final, resultado;
 
-       cout << "Qual é o tamanho do seu vetor, bb? " << "\t";
+       cout << "Qual tamanho do seu vetor? " << endl;
        cin >> tamanho;
 
        for(int i=0; i<tamanho; i++){
-              cout << "Digite o valor do " << i+1 << "º item do vetor! " << "\t";
+              cout << "Digite o item da " << i+1 << "º posição do seu vetor: " << "\t";
               cin >> valor;
               listinha.push_back(valor);
-       }
-
-       inicio = 0;
-       fim = tamanho-1;
-       while(inicio<fim){
-              auxiliar = listinha[inicio];
-              listinha[inicio] = listinha[fim];
-              listinha[fim] = auxiliar;
-              inicio++, fim--;
-       }
+       } 
 
        for(int i=0; i<tamanho; i++){
-              cout << "Valor posição " << i+1 << "º do seu array: " << "\t";
-              cout << listinha[i] << endl;
+              cout << "Os valores do seu vetor são: " << listinha[i] << endl;
        }
 
+       int a,b;
+       resultado = 0;
+       a = listinha[0];
+       b = listinha[1];
+
+       for(int i=0; i<listinha.size(); i++){
+              for(int j=i+1; j<listinha.size(); j++){
+                     if(listinha[i]*listinha[j]>a*b){
+                            a=listinha[i], b=listinha[j];
+                            resultado = a*b;
+                            cout << "O resultado é " << resultado << endl;
+                     }
+              }
+       }
 }
