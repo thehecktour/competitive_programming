@@ -17,8 +17,20 @@ int main(){
               g1.push_back(valor);
        }
 
-       for(auto i=g1.begin(); i!=g1.end(); i++){
-              cout << "Os valores do seu vetor são: " << *i << endl;
+       int inicio, final, auxiliar;
+
+       inicio = 0;
+       final = tamanho-1;
+
+       while(inicio < final){
+              auxiliar = g1[inicio];
+              g1[inicio] = g1[final];
+              g1[final] = auxiliar;
+              inicio++, final--;
+       }
+
+       for(int i=0; i<tamanho; i++){
+              cout << "Os valores do seu array são: " << g1[i] << endl;
        }
 
 }
