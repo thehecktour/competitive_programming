@@ -21,9 +21,7 @@ int main(){
 
        for(int i=0; i<tamanho; i++){
               if(listinha[i] == item){
-                     for(int j=i; j<(tamanho-1); j++){
-                            listinha[j] = listinha[j+1];
-                     }      
+                     listinha[i] = listinha[i+1];     
                      i--;
                      tamanho--;
               }
