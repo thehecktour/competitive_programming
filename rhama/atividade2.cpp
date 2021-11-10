@@ -4,16 +4,19 @@ using namespace std;
 
 int main(){
 
+       //Inicializo as variveis e 1 vetor
        int candidato1, candidato2, candidato3, candidato4, diferente, total, voto;
        vector<int> listaCandidatos;
        int auxiliar;
 
+       //Incremento todas com 0 pra não bugar nos proximos incrementos
        candidato1 = 0;
        candidato2 = 0;
        candidato3 = 0;
        candidato4 = 0;
        diferente = 0;
 
+       //Looping para pedir os votos da pessoa
        while(true){
               cout << "Em qual candidato você deseja votar? " << endl;
               cout << "Aperte 13 - Para Candidato 1" << endl;
@@ -36,12 +39,15 @@ int main(){
               }
        }
 
+       //Adicione os votos num Vetor
        listaCandidatos.push_back(candidato1);
        listaCandidatos.push_back(candidato2);
        listaCandidatos.push_back(candidato3);
        listaCandidatos.push_back(candidato4);
        listaCandidatos.push_back(diferente);
 
+
+       //Usando algoritimo de ordenação Bubble Sort para deixar o array no formato decrescente
        for(int i=0; i<5; i++){
               for(int j=0; j<i; j++){
                      if(listaCandidatos[i]>listaCandidatos[j]){
@@ -57,6 +63,8 @@ int main(){
        cout << "O candidato número 3 recebeu " << candidato3 << " votos!" << endl;
        cout << "O candidato número 4 recebeu " << candidato4 << " votos!" << endl;
        cout << "O total de votos nulos foram igual a: " << diferente << " votos!" << endl;
+       
+       //Correndo dentro do array para verificar os votos
        
        for(int i=0; i<5; i++){
               if(listaCandidatos[0] == candidato1){
