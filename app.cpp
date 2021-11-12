@@ -2,10 +2,16 @@
 #include <vector>
 using namespace std;
 
+int binarySearch(int array[], int item, int comeco, int final){
+
+       
+
+}
+
 int main(){
 
        vector<int> listinha;
-       int tamanho, valor, item;
+       int tamanho, valor, item, auxiliar;
 
        cout << "Qual tamanho do seu array?" << endl;
        cin >> tamanho;
@@ -16,19 +22,16 @@ int main(){
               listinha.push_back(valor);
        }
 
-       cout << "Qual item do seu array você quer apagar? " << endl;
-       cin >> item;
-
        for(int i=0; i<tamanho; i++){
-              if(listinha[i] == item){
-                     listinha[i] = listinha[i+1];
-                     i--;
-                     tamanho--;
+              for(int j=0; j<tamanho; j++){
+                     if(listinha[i] < listinha[j]){
+                            auxiliar = listinha[i];
+                            listinha[i] = listinha[j];
+                            listinha[j] = auxiliar;
+                     }
               }
        }
 
-       for(int i=0; i<tamanho; i++){
-              cout << "Seu array é: " << listinha[i] << endl;
-       }
+
 
 }
