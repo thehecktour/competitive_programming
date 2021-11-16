@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
 int main(){
@@ -19,6 +20,7 @@ int main(){
     media = (soma/positivo);
 
     cout << positivo << " valores positivos" << endl;
+    cout << fixed << setprecision(1);
     cout << media << endl;
     
     return 0;
