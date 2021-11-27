@@ -36,3 +36,24 @@ int main() {
     }
 
 }
+
+
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        vector<int> listinha;
+        map<int,int> mapinha;
+        
+        for(int i=0; i<nums.size(); i++){
+            if(mapinha.find(target-nums[i]) != mapinha.end()){
+                listinha.push_back(mapinha[target-nums[i]]);
+                listinha.push_back(i);
+            }else{
+                mapinha[nums[i]] = i;
+            }
+            
+        }
+        
+        return listinha;
+    }
+};

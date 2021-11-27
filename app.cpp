@@ -1,6 +1,23 @@
 #include <iostream>
 #include <vector>
+#include <map>
 using namespace std;
+
+int buscaBinaria(vector<int> vetor, int item, int tamanho){
+       int primeiro = 0;
+       int final = tamanho -1;
+       char palavra = 3;
+       while(primeiro <= final){
+              int meio = (primeiro+final)/2;
+              if(item < vetor[meio]){
+                     final = meio -1;
+              }else if(item > vetor[meio]){
+                     primeiro = meio +1;
+              }else{
+                     return meio;
+              }
+       } return palavra;
+}
 
 int main(){
 
@@ -20,21 +37,6 @@ int main(){
               cout << "O " << i+1 << "º item do seu array é: " << listinha[i] << endl;
        }
        
-       primeiro = 0;
-       ultimo = tamanho-1;
-
-       while(primeiro<ultimo){
-              auxiliar = listinha[primeiro];
-              listinha[primeiro] = listinha[ultimo];
-              listinha[ultimo] = auxiliar;
-              primeiro++, ultimo--;
-       }
-
-       for(int i=0; i<tamanho; i++){
-              cout << "Seu array inverso na posição " << i+1 << " : " << listinha[i] << endl;
-       }
-       
-
        for(int i=0; i<tamanho; i++){
               for(int j=0; j<(tamanho-1); j++){
                      if(listinha[i] < listinha[j]){
@@ -45,8 +47,11 @@ int main(){
               }
        }
 
-       for(int i=0; i<tamanho; i++){
-              cout << "Seu array ordenado na posição " << i+1 << " : " << listinha[i] << endl;
-       }
+       int itemQueQueroBuscar;
 
+       cout << "Qual item você está buscando?" << endl;
+       cin >> itemQueQueroBuscar;
+
+
+       cout << buscaBinaria(listinha, itemQueQueroBuscar, tamanho) << endl;
 }
