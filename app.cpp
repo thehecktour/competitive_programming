@@ -3,20 +3,20 @@
 #include <map>
 using namespace std;
 
-int buscaBinaria(vector<int> vetor, int item, int tamanho){
-       int primeiro = 0;
-       int final = tamanho -1;
-       char palavra = 3;
-       while(primeiro <= final){
-              int meio = (primeiro+final)/2;
-              if(item < vetor[meio]){
-                     final = meio -1;
-              }else if(item > vetor[meio]){
-                     primeiro = meio +1;
+int BinarySearch(int tamanho, int askedNumber, vector<int> vetor){
+       int first = 0;
+       int last = tamanho-1;
+
+       while (first <= last){
+              int middle = (first+last)/2;
+              if(askedNumber<vetor[middle]){
+                     last = middle - 1;
+              }else if(askedNumber>vetor[middle]){
+                     first = middle+1;
               }else{
-                     return meio;
+                     return middle;
               }
-       } return palavra;
+       }return -1;
 }
 
 int main(){
@@ -34,17 +34,18 @@ int main(){
        }
 
        for(int i=0; i<tamanho; i++){
-              cout << "O " << i+1 << "º item do seu array é: " << listinha[i] << endl;
-       }
-       
-       for(int i=0; i<tamanho; i++){
-              for(int j=0; j<(tamanho-1); j++){
+              for(int j=0; j<i; j++){
+                     int auxiliar;
                      if(listinha[i] < listinha[j]){
                             auxiliar = listinha[i];
                             listinha[i] = listinha[j];
                             listinha[j] = auxiliar;
-                     }
+                     } 
               }
+       }
+
+       for(int i=0; i<tamanho; i++){
+              cout << "O " << i+1 << "º item do seu array ORDER: " << listinha[i] << endl;
        }
 
        int itemQueQueroBuscar;
@@ -53,5 +54,5 @@ int main(){
        cin >> itemQueQueroBuscar;
 
 
-       cout << buscaBinaria(listinha, itemQueQueroBuscar, tamanho) << endl;
+       cout << BinarySearch(tamanho, itemQueQueroBuscar, listinha) << endl;
 }
