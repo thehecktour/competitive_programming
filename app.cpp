@@ -1,58 +1,38 @@
 #include <iostream>
-#include <vector>
-#include <map>
 using namespace std;
 
-int BinarySearch(int tamanho, int askedNumber, vector<int> vetor){
-       int first = 0;
-       int last = tamanho-1;
+struct Node{
+       public:
+              int valor;
+       Node *proximo;
+};
 
-       while (first <= last){
-              int middle = (first+last)/2;
-              if(askedNumber<vetor[middle]){
-                     last = middle - 1;
-              }else if(askedNumber>vetor[middle]){
-                     first = middle+1;
-              }else{
-                     return middle;
-              }
-       }return -1;
+void print(Node * n){
+       while(n != NULL){
+              cout << n->valor << " " << endl;
+              n = n->proximo;
+       }
 }
 
 int main(){
 
-       vector<int> listinha;
-       int tamanho, valor, auxiliar, primeiro, ultimo;
+       Node * head = NULL;
+       Node * second = NULL;
+       Node * third = NULL;
 
-       cout << "Qual tamanho do seu array?" << endl;
-       cin >> tamanho;
+       head = new Node();
+       second = new Node();
+       third = new Node();
 
-       for(int i=0; i<tamanho; i++){
-              cout << "Digite o " << i+1 << "º item do seu array: " << endl;
-              cin >> valor;
-              listinha.push_back(valor);
-       }
+       head->valor = 454;
+       head->proximo = second;
 
-       for(int i=0; i<tamanho; i++){
-              for(int j=0; j<i; j++){
-                     int auxiliar;
-                     if(listinha[i] < listinha[j]){
-                            auxiliar = listinha[i];
-                            listinha[i] = listinha[j];
-                            listinha[j] = auxiliar;
-                     } 
-              }
-       }
+       second->valor = 64;
+       second->proximo = third;
 
-       for(int i=0; i<tamanho; i++){
-              cout << "O " << i+1 << "º item do seu array ORDER: " << listinha[i] << endl;
-       }
+       third->valor = 1;
+       third->proximo = NULL;
 
-       int itemQueQueroBuscar;
+       print(head);
 
-       cout << "Qual item você está buscando?" << endl;
-       cin >> itemQueQueroBuscar;
-
-
-       cout << BinarySearch(tamanho, itemQueQueroBuscar, listinha) << endl;
 }
