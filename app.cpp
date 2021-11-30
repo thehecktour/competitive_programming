@@ -1,38 +1,46 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
 struct Node{
        public:
               int valor;
-       Node *proximo;
+       Node * proximo;
 };
 
-void print(Node * n){
-       while(n != NULL){
+void mostrarValor(Node * n){
+       while(n!=NULL){
               cout << n->valor << " " << endl;
               n = n->proximo;
        }
+       
 }
 
 int main(){
+       vector<int> listinha;
+       cout  << "Digite o tamanho da sua lista encadeada: " << endl;
+       int size;
+       cin >> size;
 
-       Node * head = NULL;
-       Node * second = NULL;
-       Node * third = NULL;
+       for(int i=0; i<size; i++){
+              cout << "Digite o " << i+1 << "º item da sua lista: " << endl;
+              int item;
+              cin >> item;
 
-       head = new Node();
-       second = new Node();
-       third = new Node();
+              Node * valorPonteiro = NULL;
 
-       head->valor = 454;
-       head->proximo = second;
+              valorPonteiro = new Node();
 
-       second->valor = 64;
-       second->proximo = third;
+              valorPonteiro->valor = item;
+              valorPonteiro->proximo = NULL;
 
-       third->valor = 1;
-       third->proximo = NULL;
+              listinha.push_back(valorPonteiro->valor);
 
-       print(head);
+              mostrarValor(valorPonteiro);
+       }
+       
 
+       for(int i=0; i<size; i++){
+              cout << listinha[i] << endl;
+       }
 }
