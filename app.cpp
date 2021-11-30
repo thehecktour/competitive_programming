@@ -1,52 +1,38 @@
 #include <iostream>
-#include <vector>
 using namespace std;
+
+struct Node{
+       public:
+              int valor;
+       Node *proximo;
+};
+
+void print(Node * n){
+       while(n != NULL){
+              cout << n->valor << " " << endl;
+              n = n->proximo;
+       }
+}
 
 int main(){
 
-       vector<int> listinha;
-       int tamanho, valor, auxiliar, primeiro, ultimo;
+       Node * head = NULL;
+       Node * second = NULL;
+       Node * third = NULL;
 
-       cout << "Qual tamanho do seu array?" << endl;
-       cin >> tamanho;
+       head = new Node();
+       second = new Node();
+       third = new Node();
 
-       for(int i=0; i<tamanho; i++){
-              cout << "Digite o " << i+1 << "º item do seu array: " << endl;
-              cin >> valor;
-              listinha.push_back(valor);
-       }
+       head->valor = 454;
+       head->proximo = second;
 
-       for(int i=0; i<tamanho; i++){
-              cout << "O " << i+1 << "º item do seu array é: " << listinha[i] << endl;
-       }
-       
-       primeiro = 0;
-       ultimo = tamanho-1;
+       second->valor = 64;
+       second->proximo = third;
 
-       while(primeiro<ultimo){
-              auxiliar = listinha[primeiro];
-              listinha[primeiro] = listinha[ultimo];
-              listinha[ultimo] = auxiliar;
-              primeiro++, ultimo--;
-       }
+       third->valor = 1;
+       third->proximo = NULL;
 
-       for(int i=0; i<tamanho; i++){
-              cout << "Seu array inverso na posição " << i+1 << " : " << listinha[i] << endl;
-       }
-       
-
-       for(int i=0; i<tamanho; i++){
-              for(int j=0; j<(tamanho-1); j++){
-                     if(listinha[i] < listinha[j]){
-                            auxiliar = listinha[i];
-                            listinha[i] = listinha[j];
-                            listinha[j] = auxiliar;
-                     }
-              }
-       }
-
-       for(int i=0; i<tamanho; i++){
-              cout << "Seu array ordenado na posição " << i+1 << " : " << listinha[i] << endl;
-       }
+       print(head);
 
 }
