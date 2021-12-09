@@ -1,30 +1,21 @@
 #include <iostream>
 #include <iomanip>
 using namespace std;
-
 int main(){
-
-    double salary;
-
-    cin >> salary;
-
-    if(salary>=0.0 && salary <=2000.00){
-        cout << "Isento" << endl;
-    }else if(salary>=2000.01 && salary <=3000.00){
-        double tax;
-        tax = (salary*0.08);
-        cout << fixed << setprecision(2);
-        cout << "R$ " << tax << endl;
-    }else if(salary>=3000.01 && salary<=4500.00){
-        double tax;
-        tax = ((salary-1000.00)*0.18);
-        cout << fixed << setprecision(2);
-        cout << "R$ " << tax << endl;
-    }else if(salary> 4500.00){
-        double tax;
-        tax = ((salary-1000.00)*0.28);
-        cout << fixed << setprecision(2);
-        cout << "R$ " << tax << endl;
-    }
-
+    double A;
+    float X;
+    scanf("%lf",  &A);
+    if (A<=2000) {
+        printf("Isento\n");
+    }else{
+        if (A>2000  &&  A<=3000) {
+            X=((A-2000)*0.08);}
+        else if(A>3000 && A<=4500) {
+            X=(((A-3000)*0.18)+80);}
+        else if (A>4500){
+            X=(((A-4500)*0.28)+80+270);
+        }
+        printf("R$ %.2lf\n",  X);
+    }    
+    return 0;
 }
