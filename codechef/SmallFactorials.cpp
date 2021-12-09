@@ -1,7 +1,5 @@
-#include <bits/stdc++.h>
-#include<boost/multiprecision/cpp_int.hpp>
+#include <iostream>
 using namespace std;
-using namespace boost::multiprecision;
 
 int main(){
 
@@ -14,7 +12,7 @@ int main(){
         int b;
         cin >> b;
         while(b>1){   
-            cpp_int result = 1;
+            result = 1;
             result *= b;
             b--;
         }
