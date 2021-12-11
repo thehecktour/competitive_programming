@@ -3,25 +3,24 @@ using namespace std;
 
 int main(){
 
-    int g, somador, contador;
-    
+    int g, somador;
+
     cin >> g;
 
     while(g--){
-        
-        contador = 0;
+        int a,b;
+
+        cin >> a >> b;
+
         somador = 0;
 
-        for(int i=g; i<g+10; i++){
-            if(i%2==0){
+        for(int i=a; i<a+b; i++){
+            if(i%2!=0){
                 somador +=i;
-                contador+=1;
-                if(contador == 5){
-                    continue;
-                }
             }
         }
         cout << somador << endl;
     }
+//essa questão ta errada
 
 }
