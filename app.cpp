@@ -7,28 +7,26 @@ struct Node{
         Node * proximo;
 };
 
-void printLista(Node * l){
-    while(l!=NULL){
-        cout << l->valor << endl;
-        l = l->proximo;
+void printLista(Node * head){
+    while(head != NULL){
+        cout << head->valor << endl;
+        head = head->proximo;
     }
 }
 
-void push(Node ** top, int value){
+void push(Node ** head , int value){
     
-    Node * newNode = new Node();
+    Node * novoNodo = new Node();
 
-    newNode->valor = value;
-    newNode->proximo = *top;
+    novoNodo->valor = value;
+    novoNodo->proximo = *head;
 
-    *top = newNode;
+    *head = novoNodo;
 }
 
 int main(){
-
-    Node * head = NULL;
+    struct Node * head = NULL;
 
     push(&head, 10);
     printLista(head);
-
 }
