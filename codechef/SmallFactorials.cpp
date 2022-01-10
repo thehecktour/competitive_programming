@@ -11,8 +11,8 @@ int main(){
     while(a--){
         int b;
         cin >> b;
+        result = 1;
         while(b>1){   
-            result = 1;
             result *= b;
             b--;
         }

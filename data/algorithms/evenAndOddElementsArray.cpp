@@ -5,7 +5,7 @@ using namespace std;
 int main(){
 
        vector<int> listinha;      
-       int tamanho, valor, par, impar;
+       int tamanho, valor;
 
        cout <<"Qual tamanho do seu array? " << endl;
        cin >> tamanho;

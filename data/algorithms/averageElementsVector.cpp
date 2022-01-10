@@ -7,6 +7,7 @@ int main(){
        vector<int> listinha;
        int tamanho, soma, valor;
        double media;
+       soma=0;
 
        cout << "Qual tamanho do seu vetor? " << endl;
        cin >> tamanho;
