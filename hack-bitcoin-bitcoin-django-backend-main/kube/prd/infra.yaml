@@ -1,0 +1,48 @@
+infra:
+  iamsecrets:
+    enable: true
+    name: bitcoin-django-backend
+    namespace: bitcoin
+    awsAccount: '200185864022'
+    awsRegion: us-east-1
+  roleapp:
+    enable: true
+    name: bitcoin-django-backend
+    namespace: bitcoin
+    awsAccount: '200185864022'
+    awsRegion: us-east-1
+    oidc: A2CCB6CA381DA2E9B948A849365EA79E
+  rds:
+    enable: true
+    instances:
+      - name: bitcoin-django-backend
+        namespace: bitcoin
+        dbname: bitcoin
+        allocatedStorage: 20
+        backupRetentionPeriod: 1
+        dbInstanceClass: db.t4g.micro
+        dbSubnetGroupName: crossplane-subnet-group
+        engine: mysql
+        engineVersion: 8.0.29
+        dbParameterGroupFamily: mysql8.0
+        multiAZ: false
+        port: 3306
+        region: us-east-1
+        securityGroupId: sg-04af184a39a91c3b3
+        tags:
+          - key: Name
+            value: bitcoin
+          - key: VS
+            value: hackathon
+          - key: Environment
+            value: prd
+          - key: Squad
+            value: bitcoin
+          - key: Tier
+            value: backend
+          - key: Product
+            value: bitcoin
+          - key: App
+            value: bitcoin-django-backend
+          - key: Backup
+            value: 'true'

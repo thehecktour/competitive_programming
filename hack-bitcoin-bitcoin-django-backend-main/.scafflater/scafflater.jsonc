@@ -1,0 +1,1366 @@
+{
+  "templates": [
+    {
+      "name": "django-pdd",
+      "version": "1.0.0",
+      "source": {
+        "name": "github",
+        "key": "https://github.com/gbhackathon/pdd-template-python-django",
+        "options": {
+          "baseUrl": "https://github.com",
+          "baseUrlApi": "https://api.github.com"
+        }
+      },
+      "parameters": {
+        "services": [
+          {
+            "rdsInstanceClass": "db.t4g.micro",
+            "service": "rds",
+            "rdsName": "bitcoin",
+            "rdsEngine": "mysql",
+            "rdsEngineVersion": "8.0.29"
+          }
+        ],
+        "githubUser": {
+          "picture": "https://avatars.githubusercontent.com/u/35922160?v=4",
+          "displayName": "humbcezar",
+          "email": "humbcezar@users.noreply.github.com"
+        },
+        "domain": "hackathon",
+        "system": "bitcoin",
+        "team": "bitcoin",
+        "component": "bitcoin-django-backend",
+        "componentDescription": "bitcoin django backend",
+        "domainInfo": {
+          "name": "hackathon",
+          "acronym": "hack",
+          "description": "VS para uso do Hackathon 2022",
+          "github": {
+            "team": "hackathon",
+            "devops-team": "devops-hackathon"
+          },
+          "argocd": {
+            "url": "https://argocd.hack.gb.tech"
+          },
+          "crossplane": {
+            "prd": {
+              "awsProviderVersion": "v0.26.1"
+            }
+          },
+          "helm-charts": {
+            "gb-infra": {
+              "prd": {
+                "revision": "gb-infra-0.1.32"
+              }
+            }
+          },
+          "aws": {
+            "dev": {
+              "account-id": "200185864022",
+              "default-region": "us-east-1",
+              "eks": {
+                "clusters": {
+                  "default": {
+                    "name": "eks-hackathon-dev",
+                    "oidc": "A2CCB6CA381DA2E9B948A849365EA79E"
+                  }
+                }
+              }
+            },
+            "hml": {
+              "account-id": "200185864022",
+              "default-region": "us-east-1",
+              "eks": {
+                "clusters": {
+                  "default": {
+                    "name": "eks-hackathon-hml",
+                    "oidc": "A2CCB6CA381DA2E9B948A849365EA79E"
+                  }
+                }
+              }
+            },
+            "prd": {
+              "account-id": "200185864022",
+              "default-region": "us-east-1",
+              "eks": {
+                "clusters": {
+                  "default": {
+                    "name": "eks-hackathon-prd",
+                    "oidc": "A2CCB6CA381DA2E9B948A849365EA79E"
+                  }
+                }
+              },
+              "cloudfront": {
+                "oai": "ETG2LX7HQFG47"
+              },
+              "security-groups": {
+                "rds-instance-mysql": "sg-04af184a39a91c3b3",
+                "rds-instance-postgres": "sg-04af184a39a91c3b3",
+                "document-db": "sg-04af184a39a91c3b3"
+              }
+            },
+            "shr": {
+              "account-id": "410950410321",
+              "default-region": "us-east-1"
+            }
+          },
+          "newrelic": {
+            "trusted-account-key": "2845351",
+            "prd": {
+              "account-id": "3517279"
+            }
+          }
+        },
+        "bucketSuffix": "4f2qs",
+        "github": {
+          "apiUrl": "https://api.github.com",
+          "orgName": "gbhackathon",
+          "orgUrl": "https://github.com/gbhackathon",
+          "repoName": "hack-bitcoin-bitcoin-django-backend",
+          "repoUrl": "https://github.com/gbhackathon/hack-bitcoin-bitcoin-django-backend"
+        },
+        "lifecycle": "experimental",
+        "argocdAppSelector": "bitcoin-django-backend",
+        "newRelicEntityName": "bitcoin-django-backend",
+        "configs": [
+          {
+            "name": "NEW_RELIC_CONFIG_FILE",
+            "value": "./newrelic.ini"
+          },
+          {
+            "name": "SECRET_KEY",
+            "value": "123456"
+          },
+          {
+            "name": "PYTHONPATH",
+            "value": "."
+          },
+          {
+            "name": "PYTHONUNBUFFERED",
+            "value": "1"
+          },
+          {
+            "name": "PYTHONDONTWRITEBYTECODE",
+            "value": "1"
+          },
+          {
+            "name": "POETRY_VIRTUALENVS_CREATE",
+            "value": "false"
+          },
+          {
+            "name": "LOG_LEVEL_ENABLED",
+            "value": "ERROR"
+          }
+        ]
+      }
+    },
+    {
+      "name": "pdd-template-github",
+      "version": "0.0.1",
+      "source": {
+        "name": "github",
+        "key": "https://github.com/gbhackathon/pdd-template-github",
+        "options": {
+          "baseUrl": "https://github.com",
+          "baseUrlApi": "https://api.github.com"
+        }
+      },
+      "parameters": {
+        "services": [
+          {
+            "rdsInstanceClass": "db.t4g.micro",
+            "service": "rds",
+            "rdsName": "bitcoin",
+            "rdsEngine": "mysql",
+            "rdsEngineVersion": "8.0.29"
+          }
+        ],
+        "githubUser": {
+          "picture": "https://avatars.githubusercontent.com/u/35922160?v=4",
+          "displayName": "humbcezar",
+          "email": "humbcezar@users.noreply.github.com"
+        },
+        "domain": "hackathon",
+        "system": "bitcoin",
+        "team": "bitcoin",
+        "component": "bitcoin-django-backend",
+        "componentDescription": "bitcoin django backend",
+        "domainInfo": {
+          "name": "hackathon",
+          "acronym": "hack",
+          "description": "VS para uso do Hackathon 2022",
+          "github": {
+            "team": "hackathon",
+            "devops-team": "devops-hackathon"
+          },
+          "argocd": {
+            "url": "https://argocd.hack.gb.tech"
+          },
+          "crossplane": {
+            "prd": {
+              "awsProviderVersion": "v0.26.1"
+            }
+          },
+          "helm-charts": {
+            "gb-infra": {
+              "prd": {
+                "revision": "gb-infra-0.1.32"
+              }
+            }
+          },
+          "aws": {
+            "dev": {
+              "account-id": "200185864022",
+              "default-region": "us-east-1",
+              "eks": {
+                "clusters": {
+                  "default": {
+                    "name": "eks-hackathon-dev",
+                    "oidc": "A2CCB6CA381DA2E9B948A849365EA79E"
+                  }
+                }
+              }
+            },
+            "hml": {
+              "account-id": "200185864022",
+              "default-region": "us-east-1",
+              "eks": {
+                "clusters": {
+                  "default": {
+                    "name": "eks-hackathon-hml",
+                    "oidc": "A2CCB6CA381DA2E9B948A849365EA79E"
+                  }
+                }
+              }
+            },
+            "prd": {
+              "account-id": "200185864022",
+              "default-region": "us-east-1",
+              "eks": {
+                "clusters": {
+                  "default": {
+                    "name": "eks-hackathon-prd",
+                    "oidc": "A2CCB6CA381DA2E9B948A849365EA79E"
+                  }
+                }
+              },
+              "cloudfront": {
+                "oai": "ETG2LX7HQFG47"
+              },
+              "security-groups": {
+                "rds-instance-mysql": "sg-04af184a39a91c3b3",
+                "rds-instance-postgres": "sg-04af184a39a91c3b3",
+                "document-db": "sg-04af184a39a91c3b3"
+              }
+            },
+            "shr": {
+              "account-id": "410950410321",
+              "default-region": "us-east-1"
+            }
+          },
+          "newrelic": {
+            "trusted-account-key": "2845351",
+            "prd": {
+              "account-id": "3517279"
+            }
+          }
+        },
+        "bucketSuffix": "4f2qs",
+        "github": {
+          "apiUrl": "https://api.github.com",
+          "orgName": "gbhackathon",
+          "orgUrl": "https://github.com/gbhackathon",
+          "repoName": "hack-bitcoin-bitcoin-django-backend",
+          "repoUrl": "https://github.com/gbhackathon/hack-bitcoin-bitcoin-django-backend"
+        },
+        "lifecycle": "experimental",
+        "argocdAppSelector": "bitcoin-django-backend",
+        "newRelicEntityName": "bitcoin-django-backend",
+        "configs": [
+          {
+            "name": "NEW_RELIC_CONFIG_FILE",
+            "value": "./newrelic.ini"
+          },
+          {
+            "name": "SECRET_KEY",
+            "value": "123456"
+          },
+          {
+            "name": "PYTHONPATH",
+            "value": "."
+          },
+          {
+            "name": "PYTHONUNBUFFERED",
+            "value": "1"
+          },
+          {
+            "name": "PYTHONDONTWRITEBYTECODE",
+            "value": "1"
+          },
+          {
+            "name": "POETRY_VIRTUALENVS_CREATE",
+            "value": "false"
+          },
+          {
+            "name": "LOG_LEVEL_ENABLED",
+            "value": "ERROR"
+          }
+        ]
+      }
+    },
+    {
+      "name": "pdd-template-backstage",
+      "version": "1.0.0",
+      "source": {
+        "name": "github",
+        "key": "https://github.com/gbhackathon/pdd-template-backstage",
+        "options": {
+          "baseUrl": "https://github.com",
+          "baseUrlApi": "https://api.github.com"
+        }
+      },
+      "partials": [
+        {
+          "name": "catalog:configure",
+          "parameters": {
+            "services": [
+              {
+                "rdsInstanceClass": "db.t4g.micro",
+                "service": "rds",
+                "rdsName": "bitcoin",
+                "rdsEngine": "mysql",
+                "rdsEngineVersion": "8.0.29"
+              }
+            ],
+            "githubUser": {
+              "picture": "https://avatars.githubusercontent.com/u/35922160?v=4",
+              "displayName": "humbcezar",
+              "email": "humbcezar@users.noreply.github.com"
+            },
+            "domain": "hackathon",
+            "system": "bitcoin",
+            "team": "bitcoin",
+            "component": "bitcoin-django-backend",
+            "componentDescription": "bitcoin django backend",
+            "domainInfo": {
+              "name": "hackathon",
+              "acronym": "hack",
+              "description": "VS para uso do Hackathon 2022",
+              "github": {
+                "team": "hackathon",
+                "devops-team": "devops-hackathon"
+              },
+              "argocd": {
+                "url": "https://argocd.hack.gb.tech"
+              },
+              "crossplane": {
+                "prd": {
+                  "awsProviderVersion": "v0.26.1"
+                }
+              },
+              "helm-charts": {
+                "gb-infra": {
+                  "prd": {
+                    "revision": "gb-infra-0.1.32"
+                  }
+                }
+              },
+              "aws": {
+                "dev": {
+                  "account-id": "200185864022",
+                  "default-region": "us-east-1",
+                  "eks": {
+                    "clusters": {
+                      "default": {
+                        "name": "eks-hackathon-dev",
+                        "oidc": "A2CCB6CA381DA2E9B948A849365EA79E"
+                      }
+                    }
+                  }
+                },
+                "hml": {
+                  "account-id": "200185864022",
+                  "default-region": "us-east-1",
+                  "eks": {
+                    "clusters": {
+                      "default": {
+                        "name": "eks-hackathon-hml",
+                        "oidc": "A2CCB6CA381DA2E9B948A849365EA79E"
+                      }
+                    }
+                  }
+                },
+                "prd": {
+                  "account-id": "200185864022",
+                  "default-region": "us-east-1",
+                  "eks": {
+                    "clusters": {
+                      "default": {
+                        "name": "eks-hackathon-prd",
+                        "oidc": "A2CCB6CA381DA2E9B948A849365EA79E"
+                      }
+                    }
+                  },
+                  "cloudfront": {
+                    "oai": "ETG2LX7HQFG47"
+                  },
+                  "security-groups": {
+                    "rds-instance-mysql": "sg-04af184a39a91c3b3",
+                    "rds-instance-postgres": "sg-04af184a39a91c3b3",
+                    "document-db": "sg-04af184a39a91c3b3"
+                  }
+                },
+                "shr": {
+                  "account-id": "410950410321",
+                  "default-region": "us-east-1"
+                }
+              },
+              "newrelic": {
+                "trusted-account-key": "2845351",
+                "prd": {
+                  "account-id": "3517279"
+                }
+              }
+            },
+            "bucketSuffix": "4f2qs",
+            "github": {
+              "apiUrl": "https://api.github.com",
+              "orgName": "gbhackathon",
+              "orgUrl": "https://github.com/gbhackathon",
+              "repoName": "hack-bitcoin-bitcoin-django-backend",
+              "repoUrl": "https://github.com/gbhackathon/hack-bitcoin-bitcoin-django-backend"
+            },
+            "lifecycle": "experimental",
+            "argocdAppSelector": "bitcoin-django-backend",
+            "newRelicEntityName": "bitcoin-django-backend",
+            "configs": [
+              {
+                "name": "NEW_RELIC_CONFIG_FILE",
+                "value": "./newrelic.ini"
+              },
+              {
+                "name": "SECRET_KEY",
+                "value": "123456"
+              },
+              {
+                "name": "PYTHONPATH",
+                "value": "."
+              },
+              {
+                "name": "PYTHONUNBUFFERED",
+                "value": "1"
+              },
+              {
+                "name": "PYTHONDONTWRITEBYTECODE",
+                "value": "1"
+              },
+              {
+                "name": "POETRY_VIRTUALENVS_CREATE",
+                "value": "false"
+              },
+              {
+                "name": "LOG_LEVEL_ENABLED",
+                "value": "ERROR"
+              }
+            ]
+          }
+        },
+        {
+          "name": "k8s:app-deploy",
+          "parameters": {
+            "services": [
+              {
+                "rdsInstanceClass": "db.t4g.micro",
+                "service": "rds",
+                "rdsName": "bitcoin",
+                "rdsEngine": "mysql",
+                "rdsEngineVersion": "8.0.29"
+              }
+            ],
+            "githubUser": {
+              "picture": "https://avatars.githubusercontent.com/u/35922160?v=4",
+              "displayName": "humbcezar",
+              "email": "humbcezar@users.noreply.github.com"
+            },
+            "domain": "hackathon",
+            "system": "bitcoin",
+            "team": "bitcoin",
+            "component": "bitcoin-django-backend",
+            "componentDescription": "bitcoin django backend",
+            "domainInfo": {
+              "name": "hackathon",
+              "acronym": "hack",
+              "description": "VS para uso do Hackathon 2022",
+              "github": {
+                "team": "hackathon",
+                "devops-team": "devops-hackathon"
+              },
+              "argocd": {
+                "url": "https://argocd.hack.gb.tech"
+              },
+              "crossplane": {
+                "prd": {
+                  "awsProviderVersion": "v0.26.1"
+                }
+              },
+              "helm-charts": {
+                "gb-infra": {
+                  "prd": {
+                    "revision": "gb-infra-0.1.32"
+                  }
+                }
+              },
+              "aws": {
+                "dev": {
+                  "account-id": "200185864022",
+                  "default-region": "us-east-1",
+                  "eks": {
+                    "clusters": {
+                      "default": {
+                        "name": "eks-hackathon-dev",
+                        "oidc": "A2CCB6CA381DA2E9B948A849365EA79E"
+                      }
+                    }
+                  }
+                },
+                "hml": {
+                  "account-id": "200185864022",
+                  "default-region": "us-east-1",
+                  "eks": {
+                    "clusters": {
+                      "default": {
+                        "name": "eks-hackathon-hml",
+                        "oidc": "A2CCB6CA381DA2E9B948A849365EA79E"
+                      }
+                    }
+                  }
+                },
+                "prd": {
+                  "account-id": "200185864022",
+                  "default-region": "us-east-1",
+                  "eks": {
+                    "clusters": {
+                      "default": {
+                        "name": "eks-hackathon-prd",
+                        "oidc": "A2CCB6CA381DA2E9B948A849365EA79E"
+                      }
+                    }
+                  },
+                  "cloudfront": {
+                    "oai": "ETG2LX7HQFG47"
+                  },
+                  "security-groups": {
+                    "rds-instance-mysql": "sg-04af184a39a91c3b3",
+                    "rds-instance-postgres": "sg-04af184a39a91c3b3",
+                    "document-db": "sg-04af184a39a91c3b3"
+                  }
+                },
+                "shr": {
+                  "account-id": "410950410321",
+                  "default-region": "us-east-1"
+                }
+              },
+              "newrelic": {
+                "trusted-account-key": "2845351",
+                "prd": {
+                  "account-id": "3517279"
+                }
+              }
+            },
+            "bucketSuffix": "4f2qs",
+            "github": {
+              "apiUrl": "https://api.github.com",
+              "orgName": "gbhackathon",
+              "orgUrl": "https://github.com/gbhackathon",
+              "repoName": "hack-bitcoin-bitcoin-django-backend",
+              "repoUrl": "https://github.com/gbhackathon/hack-bitcoin-bitcoin-django-backend"
+            },
+            "lifecycle": "experimental",
+            "argocdAppSelector": "bitcoin-django-backend",
+            "newRelicEntityName": "bitcoin-django-backend",
+            "configs": [
+              {
+                "name": "NEW_RELIC_CONFIG_FILE",
+                "value": "./newrelic.ini"
+              },
+              {
+                "name": "SECRET_KEY",
+                "value": "123456"
+              },
+              {
+                "name": "PYTHONPATH",
+                "value": "."
+              },
+              {
+                "name": "PYTHONUNBUFFERED",
+                "value": "1"
+              },
+              {
+                "name": "PYTHONDONTWRITEBYTECODE",
+                "value": "1"
+              },
+              {
+                "name": "POETRY_VIRTUALENVS_CREATE",
+                "value": "false"
+              },
+              {
+                "name": "LOG_LEVEL_ENABLED",
+                "value": "ERROR"
+              }
+            ]
+          }
+        }
+      ],
+      "parameters": {
+        "services": [
+          {
+            "rdsInstanceClass": "db.t4g.micro",
+            "service": "rds",
+            "rdsName": "bitcoin",
+            "rdsEngine": "mysql",
+            "rdsEngineVersion": "8.0.29"
+          }
+        ],
+        "githubUser": {
+          "picture": "https://avatars.githubusercontent.com/u/35922160?v=4",
+          "displayName": "humbcezar",
+          "email": "humbcezar@users.noreply.github.com"
+        },
+        "domain": "hackathon",
+        "system": "bitcoin",
+        "team": "bitcoin",
+        "component": "bitcoin-django-backend",
+        "componentDescription": "bitcoin django backend",
+        "domainInfo": {
+          "name": "hackathon",
+          "acronym": "hack",
+          "description": "VS para uso do Hackathon 2022",
+          "github": {
+            "team": "hackathon",
+            "devops-team": "devops-hackathon"
+          },
+          "argocd": {
+            "url": "https://argocd.hack.gb.tech"
+          },
+          "crossplane": {
+            "prd": {
+              "awsProviderVersion": "v0.26.1"
+            }
+          },
+          "helm-charts": {
+            "gb-infra": {
+              "prd": {
+                "revision": "gb-infra-0.1.32"
+              }
+            }
+          },
+          "aws": {
+            "dev": {
+              "account-id": "200185864022",
+              "default-region": "us-east-1",
+              "eks": {
+                "clusters": {
+                  "default": {
+                    "name": "eks-hackathon-dev",
+                    "oidc": "A2CCB6CA381DA2E9B948A849365EA79E"
+                  }
+                }
+              }
+            },
+            "hml": {
+              "account-id": "200185864022",
+              "default-region": "us-east-1",
+              "eks": {
+                "clusters": {
+                  "default": {
+                    "name": "eks-hackathon-hml",
+                    "oidc": "A2CCB6CA381DA2E9B948A849365EA79E"
+                  }
+                }
+              }
+            },
+            "prd": {
+              "account-id": "200185864022",
+              "default-region": "us-east-1",
+              "eks": {
+                "clusters": {
+                  "default": {
+                    "name": "eks-hackathon-prd",
+                    "oidc": "A2CCB6CA381DA2E9B948A849365EA79E"
+                  }
+                }
+              },
+              "cloudfront": {
+                "oai": "ETG2LX7HQFG47"
+              },
+              "security-groups": {
+                "rds-instance-mysql": "sg-04af184a39a91c3b3",
+                "rds-instance-postgres": "sg-04af184a39a91c3b3",
+                "document-db": "sg-04af184a39a91c3b3"
+              }
+            },
+            "shr": {
+              "account-id": "410950410321",
+              "default-region": "us-east-1"
+            }
+          },
+          "newrelic": {
+            "trusted-account-key": "2845351",
+            "prd": {
+              "account-id": "3517279"
+            }
+          }
+        },
+        "bucketSuffix": "4f2qs",
+        "github": {
+          "apiUrl": "https://api.github.com",
+          "orgName": "gbhackathon",
+          "orgUrl": "https://github.com/gbhackathon",
+          "repoName": "hack-bitcoin-bitcoin-django-backend",
+          "repoUrl": "https://github.com/gbhackathon/hack-bitcoin-bitcoin-django-backend"
+        },
+        "lifecycle": "experimental",
+        "argocdAppSelector": "bitcoin-django-backend",
+        "newRelicEntityName": "bitcoin-django-backend",
+        "configs": [
+          {
+            "name": "NEW_RELIC_CONFIG_FILE",
+            "value": "./newrelic.ini"
+          },
+          {
+            "name": "SECRET_KEY",
+            "value": "123456"
+          },
+          {
+            "name": "PYTHONPATH",
+            "value": "."
+          },
+          {
+            "name": "PYTHONUNBUFFERED",
+            "value": "1"
+          },
+          {
+            "name": "PYTHONDONTWRITEBYTECODE",
+            "value": "1"
+          },
+          {
+            "name": "POETRY_VIRTUALENVS_CREATE",
+            "value": "false"
+          },
+          {
+            "name": "LOG_LEVEL_ENABLED",
+            "value": "ERROR"
+          }
+        ]
+      }
+    },
+    {
+      "name": "pdd-template-crossplane-aws",
+      "version": "1.0.0",
+      "source": {
+        "name": "github",
+        "key": "https://github.com/gbhackathon/pdd-template-crossplane-aws",
+        "options": {
+          "baseUrl": "https://github.com",
+          "baseUrlApi": "https://api.github.com"
+        }
+      },
+      "partials": [
+        {
+          "name": "secrets",
+          "parameters": {
+            "services": [
+              {
+                "rdsInstanceClass": "db.t4g.micro",
+                "service": "rds",
+                "rdsName": "bitcoin",
+                "rdsEngine": "mysql",
+                "rdsEngineVersion": "8.0.29"
+              }
+            ],
+            "githubUser": {
+              "picture": "https://avatars.githubusercontent.com/u/35922160?v=4",
+              "displayName": "humbcezar",
+              "email": "humbcezar@users.noreply.github.com"
+            },
+            "domain": "hackathon",
+            "system": "bitcoin",
+            "team": "bitcoin",
+            "component": "bitcoin-django-backend",
+            "componentDescription": "bitcoin django backend",
+            "domainInfo": {
+              "name": "hackathon",
+              "acronym": "hack",
+              "description": "VS para uso do Hackathon 2022",
+              "github": {
+                "team": "hackathon",
+                "devops-team": "devops-hackathon"
+              },
+              "argocd": {
+                "url": "https://argocd.hack.gb.tech"
+              },
+              "crossplane": {
+                "prd": {
+                  "awsProviderVersion": "v0.26.1"
+                }
+              },
+              "helm-charts": {
+                "gb-infra": {
+                  "prd": {
+                    "revision": "gb-infra-0.1.32"
+                  }
+                }
+              },
+              "aws": {
+                "dev": {
+                  "account-id": "200185864022",
+                  "default-region": "us-east-1",
+                  "eks": {
+                    "clusters": {
+                      "default": {
+                        "name": "eks-hackathon-dev",
+                        "oidc": "A2CCB6CA381DA2E9B948A849365EA79E"
+                      }
+                    }
+                  }
+                },
+                "hml": {
+                  "account-id": "200185864022",
+                  "default-region": "us-east-1",
+                  "eks": {
+                    "clusters": {
+                      "default": {
+                        "name": "eks-hackathon-hml",
+                        "oidc": "A2CCB6CA381DA2E9B948A849365EA79E"
+                      }
+                    }
+                  }
+                },
+                "prd": {
+                  "account-id": "200185864022",
+                  "default-region": "us-east-1",
+                  "eks": {
+                    "clusters": {
+                      "default": {
+                        "name": "eks-hackathon-prd",
+                        "oidc": "A2CCB6CA381DA2E9B948A849365EA79E"
+                      }
+                    }
+                  },
+                  "cloudfront": {
+                    "oai": "ETG2LX7HQFG47"
+                  },
+                  "security-groups": {
+                    "rds-instance-mysql": "sg-04af184a39a91c3b3",
+                    "rds-instance-postgres": "sg-04af184a39a91c3b3",
+                    "document-db": "sg-04af184a39a91c3b3"
+                  }
+                },
+                "shr": {
+                  "account-id": "410950410321",
+                  "default-region": "us-east-1"
+                }
+              },
+              "newrelic": {
+                "trusted-account-key": "2845351",
+                "prd": {
+                  "account-id": "3517279"
+                }
+              }
+            },
+            "bucketSuffix": "4f2qs",
+            "github": {
+              "apiUrl": "https://api.github.com",
+              "orgName": "gbhackathon",
+              "orgUrl": "https://github.com/gbhackathon",
+              "repoName": "hack-bitcoin-bitcoin-django-backend",
+              "repoUrl": "https://github.com/gbhackathon/hack-bitcoin-bitcoin-django-backend"
+            },
+            "lifecycle": "experimental",
+            "argocdAppSelector": "bitcoin-django-backend",
+            "newRelicEntityName": "bitcoin-django-backend",
+            "configs": [
+              {
+                "name": "NEW_RELIC_CONFIG_FILE",
+                "value": "./newrelic.ini"
+              },
+              {
+                "name": "SECRET_KEY",
+                "value": "123456"
+              },
+              {
+                "name": "PYTHONPATH",
+                "value": "."
+              },
+              {
+                "name": "PYTHONUNBUFFERED",
+                "value": "1"
+              },
+              {
+                "name": "PYTHONDONTWRITEBYTECODE",
+                "value": "1"
+              },
+              {
+                "name": "POETRY_VIRTUALENVS_CREATE",
+                "value": "false"
+              },
+              {
+                "name": "LOG_LEVEL_ENABLED",
+                "value": "ERROR"
+              }
+            ]
+          }
+        },
+        {
+          "name": "app-role",
+          "parameters": {
+            "services": [
+              {
+                "rdsInstanceClass": "db.t4g.micro",
+                "service": "rds",
+                "rdsName": "bitcoin",
+                "rdsEngine": "mysql",
+                "rdsEngineVersion": "8.0.29"
+              }
+            ],
+            "githubUser": {
+              "picture": "https://avatars.githubusercontent.com/u/35922160?v=4",
+              "displayName": "humbcezar",
+              "email": "humbcezar@users.noreply.github.com"
+            },
+            "domain": "hackathon",
+            "system": "bitcoin",
+            "team": "bitcoin",
+            "component": "bitcoin-django-backend",
+            "componentDescription": "bitcoin django backend",
+            "domainInfo": {
+              "name": "hackathon",
+              "acronym": "hack",
+              "description": "VS para uso do Hackathon 2022",
+              "github": {
+                "team": "hackathon",
+                "devops-team": "devops-hackathon"
+              },
+              "argocd": {
+                "url": "https://argocd.hack.gb.tech"
+              },
+              "crossplane": {
+                "prd": {
+                  "awsProviderVersion": "v0.26.1"
+                }
+              },
+              "helm-charts": {
+                "gb-infra": {
+                  "prd": {
+                    "revision": "gb-infra-0.1.32"
+                  }
+                }
+              },
+              "aws": {
+                "dev": {
+                  "account-id": "200185864022",
+                  "default-region": "us-east-1",
+                  "eks": {
+                    "clusters": {
+                      "default": {
+                        "name": "eks-hackathon-dev",
+                        "oidc": "A2CCB6CA381DA2E9B948A849365EA79E"
+                      }
+                    }
+                  }
+                },
+                "hml": {
+                  "account-id": "200185864022",
+                  "default-region": "us-east-1",
+                  "eks": {
+                    "clusters": {
+                      "default": {
+                        "name": "eks-hackathon-hml",
+                        "oidc": "A2CCB6CA381DA2E9B948A849365EA79E"
+                      }
+                    }
+                  }
+                },
+                "prd": {
+                  "account-id": "200185864022",
+                  "default-region": "us-east-1",
+                  "eks": {
+                    "clusters": {
+                      "default": {
+                        "name": "eks-hackathon-prd",
+                        "oidc": "A2CCB6CA381DA2E9B948A849365EA79E"
+                      }
+                    }
+                  },
+                  "cloudfront": {
+                    "oai": "ETG2LX7HQFG47"
+                  },
+                  "security-groups": {
+                    "rds-instance-mysql": "sg-04af184a39a91c3b3",
+                    "rds-instance-postgres": "sg-04af184a39a91c3b3",
+                    "document-db": "sg-04af184a39a91c3b3"
+                  }
+                },
+                "shr": {
+                  "account-id": "410950410321",
+                  "default-region": "us-east-1"
+                }
+              },
+              "newrelic": {
+                "trusted-account-key": "2845351",
+                "prd": {
+                  "account-id": "3517279"
+                }
+              }
+            },
+            "bucketSuffix": "4f2qs",
+            "github": {
+              "apiUrl": "https://api.github.com",
+              "orgName": "gbhackathon",
+              "orgUrl": "https://github.com/gbhackathon",
+              "repoName": "hack-bitcoin-bitcoin-django-backend",
+              "repoUrl": "https://github.com/gbhackathon/hack-bitcoin-bitcoin-django-backend"
+            },
+            "lifecycle": "experimental",
+            "argocdAppSelector": "bitcoin-django-backend",
+            "newRelicEntityName": "bitcoin-django-backend",
+            "configs": [
+              {
+                "name": "NEW_RELIC_CONFIG_FILE",
+                "value": "./newrelic.ini"
+              },
+              {
+                "name": "SECRET_KEY",
+                "value": "123456"
+              },
+              {
+                "name": "PYTHONPATH",
+                "value": "."
+              },
+              {
+                "name": "PYTHONUNBUFFERED",
+                "value": "1"
+              },
+              {
+                "name": "PYTHONDONTWRITEBYTECODE",
+                "value": "1"
+              },
+              {
+                "name": "POETRY_VIRTUALENVS_CREATE",
+                "value": "false"
+              },
+              {
+                "name": "LOG_LEVEL_ENABLED",
+                "value": "ERROR"
+              }
+            ]
+          }
+        },
+        {
+          "name": "rds",
+          "parameters": {
+            "services": [
+              {
+                "rdsInstanceClass": "db.t4g.micro",
+                "service": "rds",
+                "rdsName": "bitcoin",
+                "rdsEngine": "mysql",
+                "rdsEngineVersion": "8.0.29"
+              }
+            ],
+            "githubUser": {
+              "picture": "https://avatars.githubusercontent.com/u/35922160?v=4",
+              "displayName": "humbcezar",
+              "email": "humbcezar@users.noreply.github.com"
+            },
+            "domain": "hackathon",
+            "system": "bitcoin",
+            "team": "bitcoin",
+            "component": "bitcoin-django-backend",
+            "componentDescription": "bitcoin django backend",
+            "domainInfo": {
+              "name": "hackathon",
+              "acronym": "hack",
+              "description": "VS para uso do Hackathon 2022",
+              "backstage": {},
+              "github": {
+                "team": "hackathon",
+                "devops-team": "devops-hackathon"
+              },
+              "argocd": {
+                "url": "https://argocd.hack.gb.tech"
+              },
+              "crossplane": {
+                "prd": {
+                  "awsProviderVersion": "v0.26.1"
+                }
+              },
+              "helm-charts": {
+                "gb-infra": {
+                  "prd": {
+                    "revision": "gb-infra-0.1.32"
+                  }
+                }
+              },
+              "aws": {
+                "dev": {
+                  "account-id": "200185864022",
+                  "default-region": "us-east-1",
+                  "waf": {},
+                  "eks": {
+                    "clusters": {
+                      "default": {
+                        "name": "eks-hackathon-dev",
+                        "oidc": "A2CCB6CA381DA2E9B948A849365EA79E"
+                      }
+                    }
+                  },
+                  "cloudfront": {},
+                  "security-groups": {}
+                },
+                "hml": {
+                  "account-id": "200185864022",
+                  "default-region": "us-east-1",
+                  "waf": {},
+                  "eks": {
+                    "clusters": {
+                      "default": {
+                        "name": "eks-hackathon-hml",
+                        "oidc": "A2CCB6CA381DA2E9B948A849365EA79E"
+                      }
+                    }
+                  },
+                  "cloudfront": {},
+                  "security-groups": {}
+                },
+                "prd": {
+                  "account-id": "200185864022",
+                  "default-region": "us-east-1",
+                  "waf": {},
+                  "eks": {
+                    "clusters": {
+                      "default": {
+                        "name": "eks-hackathon-prd",
+                        "oidc": "A2CCB6CA381DA2E9B948A849365EA79E"
+                      }
+                    }
+                  },
+                  "cloudfront": {
+                    "oai": "ETG2LX7HQFG47"
+                  },
+                  "security-groups": {
+                    "rds-instance-mysql": "sg-04af184a39a91c3b3",
+                    "rds-instance-postgres": "sg-04af184a39a91c3b3",
+                    "document-db": "sg-04af184a39a91c3b3"
+                  }
+                },
+                "shr": {
+                  "account-id": "410950410321",
+                  "default-region": "us-east-1"
+                }
+              },
+              "newrelic": {
+                "trusted-account-key": "2845351",
+                "prd": {
+                  "account-id": "3517279"
+                },
+                "shr": {}
+              }
+            },
+            "bucketSuffix": "4f2qs",
+            "github": {
+              "apiUrl": "https://api.github.com",
+              "orgName": "gbhackathon",
+              "orgUrl": "https://github.com/gbhackathon",
+              "repoName": "hack-bitcoin-bitcoin-django-backend",
+              "repoUrl": "https://github.com/gbhackathon/hack-bitcoin-bitcoin-django-backend"
+            },
+            "lifecycle": "experimental",
+            "argocdAppSelector": "bitcoin-django-backend",
+            "newRelicEntityName": "bitcoin-django-backend",
+            "configs": [
+              {
+                "name": "NEW_RELIC_CONFIG_FILE",
+                "value": "./newrelic.ini"
+              },
+              {
+                "name": "SECRET_KEY",
+                "value": "123456"
+              },
+              {
+                "name": "PYTHONPATH",
+                "value": "."
+              },
+              {
+                "name": "PYTHONUNBUFFERED",
+                "value": "1"
+              },
+              {
+                "name": "PYTHONDONTWRITEBYTECODE",
+                "value": "1"
+              },
+              {
+                "name": "POETRY_VIRTUALENVS_CREATE",
+                "value": "false"
+              },
+              {
+                "name": "LOG_LEVEL_ENABLED",
+                "value": "ERROR"
+              }
+            ],
+            "rdsInstanceClass": "db.t4g.micro",
+            "service": "rds",
+            "rdsName": "bitcoin",
+            "rdsEngine": "mysql",
+            "rdsEngineVersion": "8.0.29",
+            "rdsDbName": "bitcoin",
+            "rdsDbParameterGroupFamily": "mysql8.0",
+            "rdsSecurityGroupPrd": "sg-04af184a39a91c3b3"
+          }
+        }
+      ],
+      "parameters": {
+        "services": [
+          {
+            "rdsInstanceClass": "db.t4g.micro",
+            "service": "rds",
+            "rdsName": "bitcoin",
+            "rdsEngine": "mysql",
+            "rdsEngineVersion": "8.0.29"
+          }
+        ],
+        "githubUser": {
+          "picture": "https://avatars.githubusercontent.com/u/35922160?v=4",
+          "displayName": "humbcezar",
+          "email": "humbcezar@users.noreply.github.com"
+        },
+        "domain": "hackathon",
+        "system": "bitcoin",
+        "team": "bitcoin",
+        "component": "bitcoin-django-backend",
+        "componentDescription": "bitcoin django backend",
+        "domainInfo": {
+          "name": "hackathon",
+          "acronym": "hack",
+          "description": "VS para uso do Hackathon 2022",
+          "github": {
+            "team": "hackathon",
+            "devops-team": "devops-hackathon"
+          },
+          "argocd": {
+            "url": "https://argocd.hack.gb.tech"
+          },
+          "crossplane": {
+            "prd": {
+              "awsProviderVersion": "v0.26.1"
+            }
+          },
+          "helm-charts": {
+            "gb-infra": {
+              "prd": {
+                "revision": "gb-infra-0.1.32"
+              }
+            }
+          },
+          "aws": {
+            "dev": {
+              "account-id": "200185864022",
+              "default-region": "us-east-1",
+              "eks": {
+                "clusters": {
+                  "default": {
+                    "name": "eks-hackathon-dev",
+                    "oidc": "A2CCB6CA381DA2E9B948A849365EA79E"
+                  }
+                }
+              }
+            },
+            "hml": {
+              "account-id": "200185864022",
+              "default-region": "us-east-1",
+              "eks": {
+                "clusters": {
+                  "default": {
+                    "name": "eks-hackathon-hml",
+                    "oidc": "A2CCB6CA381DA2E9B948A849365EA79E"
+                  }
+                }
+              }
+            },
+            "prd": {
+              "account-id": "200185864022",
+              "default-region": "us-east-1",
+              "eks": {
+                "clusters": {
+                  "default": {
+                    "name": "eks-hackathon-prd",
+                    "oidc": "A2CCB6CA381DA2E9B948A849365EA79E"
+                  }
+                }
+              },
+              "cloudfront": {
+                "oai": "ETG2LX7HQFG47"
+              },
+              "security-groups": {
+                "rds-instance-mysql": "sg-04af184a39a91c3b3",
+                "rds-instance-postgres": "sg-04af184a39a91c3b3",
+                "document-db": "sg-04af184a39a91c3b3"
+              }
+            },
+            "shr": {
+              "account-id": "410950410321",
+              "default-region": "us-east-1"
+            }
+          },
+          "newrelic": {
+            "trusted-account-key": "2845351",
+            "prd": {
+              "account-id": "3517279"
+            }
+          }
+        },
+        "bucketSuffix": "4f2qs",
+        "github": {
+          "apiUrl": "https://api.github.com",
+          "orgName": "gbhackathon",
+          "orgUrl": "https://github.com/gbhackathon",
+          "repoName": "hack-bitcoin-bitcoin-django-backend",
+          "repoUrl": "https://github.com/gbhackathon/hack-bitcoin-bitcoin-django-backend"
+        },
+        "lifecycle": "experimental",
+        "argocdAppSelector": "bitcoin-django-backend",
+        "newRelicEntityName": "bitcoin-django-backend",
+        "configs": [
+          {
+            "name": "NEW_RELIC_CONFIG_FILE",
+            "value": "./newrelic.ini"
+          },
+          {
+            "name": "SECRET_KEY",
+            "value": "123456"
+          },
+          {
+            "name": "PYTHONPATH",
+            "value": "."
+          },
+          {
+            "name": "PYTHONUNBUFFERED",
+            "value": "1"
+          },
+          {
+            "name": "PYTHONDONTWRITEBYTECODE",
+            "value": "1"
+          },
+          {
+            "name": "POETRY_VIRTUALENVS_CREATE",
+            "value": "false"
+          },
+          {
+            "name": "LOG_LEVEL_ENABLED",
+            "value": "ERROR"
+          }
+        ]
+      }
+    }
+  ]
+}
