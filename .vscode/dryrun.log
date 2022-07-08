@@ -1,0 +1,6 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Users/colaborador/Downloads/competitive_programming'
+make: Leaving directory `/Users/colaborador/Downloads/competitive_programming'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+
