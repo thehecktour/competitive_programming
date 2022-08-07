@@ -8,16 +8,7 @@ using namespace std;
 
 int main() {    
 
-    int k;
-    cin >> k;
-
-    while(k--){
-        int a,b;
-
-        cin >> a >> b;
-
-        
-    }
+    
 
     return 0;   
 }
