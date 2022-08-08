@@ -1,4 +1,4 @@
 # Competitive Programming!
 
 
-### Walking until the best in the World as competitive programmer!
+##### I'm gonna become the best competitive programming in the World!
