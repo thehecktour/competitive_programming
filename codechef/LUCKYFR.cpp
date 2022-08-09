@@ -14,20 +14,17 @@ int main() {
 
     while(k--){
         string f;
-        int contadorA = 0, contadorB = 0;
         cin >> f;
+        int contador = 0;
+
         for(int i=0; i<f.length(); i++){
-            if((f[i]=='A'&&f[i+1]=='B')||f[i]=='B'&&f[i+1]=='A'){
-                contadorA++;
-                i++;
+            if(f[i]=='4'){
+                contador++;
             }
         }
 
-        if(contadorA!=(f.length()/2)){
-            cout << "NO" << endl;
-        }else{
-            cout << "YES" << endl;
-        }
+        cout << contador << endl;
+
     }
 
     return 0;   
