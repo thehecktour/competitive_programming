@@ -9,24 +9,23 @@ using namespace std;
 int main() {    
 
     int k;
-    
+
     cin >> k;
     
-    int a = 0, b= 0;
     while(k--){
-        int f;
-        cin >> f;
-        if(f%2==0){
-            a++;
-        }else{
-            b++;
-        }
-    }
+        int a,b, c;
 
-    if(a>b){
-        cout << "READY FOR BATTLE" << endl;
-    }else{
-        cout << "NOT READY" << endl;
+        cin >> a >> b;
+
+        if(a<=6){
+            cout << 1*b << endl;
+        }else{
+            if(a%6==0){
+                cout << (a/6)*b << endl;
+            }else{
+                cout << ((a/6)+1)*b << endl;
+            }
+        }
     }
 
     return 0;   

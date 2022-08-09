@@ -9,24 +9,19 @@ using namespace std;
 int main() {    
 
     int k;
-    
+
     cin >> k;
     
-    int a = 0, b= 0;
     while(k--){
-        int f;
-        cin >> f;
-        if(f%2==0){
-            a++;
-        }else{
-            b++;
-        }
-    }
+        int a,b, c;
 
-    if(a>b){
-        cout << "READY FOR BATTLE" << endl;
-    }else{
-        cout << "NOT READY" << endl;
+        cin >> a >> b >> c;
+
+        if(((a+b+c)>=100)&&((a>=10)&&(b>=10)&&(c>=10))){
+            cout << "PASS" << endl;
+        }else{
+            cout << "FAIL" << endl;
+        }
     }
 
     return 0;   
