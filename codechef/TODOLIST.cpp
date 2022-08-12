@@ -7,9 +7,10 @@
 using namespace std;
 
 int main() {    
-    int k;
+    ll k;
 
     cin >> k;
 
+    cout << volta(k) << endl;
     return 0;   
 }
