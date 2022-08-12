@@ -13,24 +13,22 @@ int main() {
 
     while(k--){
         int a;
-        string b;
-        cin >> a >> b;
+        cin >> a;
+        vector<int> l;
 
-        string f = "";
-
-        for(int i=0; i<b.length(); i++){
-            if(b[i]=='A'){
-                f+="T";
-            }else if(b[i]=='T'){
-                f+="A";
-            }else if(b[i]=='C'){
-                f+="G";
-            }else if(b[i]=='G'){
-                f+="C";
+        l.clear();
+        while(a--){
+            int f;
+            cin >> f;
+            l.pb(f);
+        }
+        int contador = 0;
+        for(int i=0; i<l.size(); i++){
+            if(l[i]>=1000){
+                contador++;
             }
         }
-
-        cout << f << endl;
+        cout << contador << endl;
     }
     return 0;   
 }
