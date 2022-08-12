@@ -7,13 +7,16 @@
 using namespace std;
 
 int main() {    
+    
     int k;
 
     cin >> k;
 
     while(k--){
-        int a;
+        int f;
+        cin >> f;
         
     }
+
     return 0;   
 }
