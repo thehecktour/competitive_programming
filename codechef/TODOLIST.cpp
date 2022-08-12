@@ -7,10 +7,28 @@
 using namespace std;
 
 int main() {    
-    ll k;
+    int k;
 
     cin >> k;
 
-    cout << volta(k) << endl;
+    while(k--){
+        int a;
+        cin >> a;
+        vector<int> l;
+
+        l.clear();
+        while(a--){
+            int f;
+            cin >> f;
+            l.pb(f);
+        }
+        int contador = 0;
+        for(int i=0; i<l.size(); i++){
+            if(l[i]>=1000){
+                contador++;
+            }
+        }
+        cout << contador << endl;
+    }
     return 0;   
 }
