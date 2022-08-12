@@ -13,9 +13,7 @@ int main() {
     cin >> k;
 
     while(k--){
-        int f;
-        cin >> f;
-        
+        int a;
     }
 
     return 0;   
