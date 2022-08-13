@@ -7,28 +7,29 @@
 using namespace std;
 
 int main() {    
+    
+    vector<int> l = {100,50,10,5,2,1};
+
     int k;
 
     cin >> k;
 
     while(k--){
-        int a;
-        cin >> a;
-        vector<int> l;
+        int f;
+        cin >> f;
+        int contador = 0, i = 0;
 
-        l.clear();
-        while(a--){
-            int f;
-            cin >> f;
-            l.pb(f);
-        }
-        int contador = 0;
-        for(int i=0; i<l.size(); i++){
-            if(l[i]>=1000){
+        while(f>0){
+            if(f>=l[i]){
+                f = f-l[i];
                 contador++;
+            }else{
+                i++;
             }
         }
+
         cout << contador << endl;
     }
+
     return 0;   
 }

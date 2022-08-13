@@ -7,15 +7,19 @@
 using namespace std;
 
 int main() {    
-    
     int k;
 
     cin >> k;
 
     while(k--){
-        int a; 
+        int a,b,c;
+        cin >> a >> b >> c;
+        int contador = 0, r = b*c;
+        while(a>0){
+            a-=r;
+            contador++;
+        }
+        cout << contador << endl;
     }
-
-
     return 0;   
 }
