@@ -7,6 +7,7 @@
         "list": "cpp",
         "vector": "cpp",
         "ostream": "cpp",
-        "map": "cpp"
+        "map": "cpp",
+        "algorithm": "cpp"
     }
 }

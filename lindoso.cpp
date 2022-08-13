@@ -8,14 +8,13 @@ using namespace std;
 
 int main() {    
 
-    char k;
+    int k;
 
     cin >> k;
 
-    if(tolower(k)=='a'||tolower(k)=='e'||tolower(k)=='i'||tolower(k)=='o'||tolower(k)=='u'){
-        cout << "Vowel" << endl;
-    }else{
-        cout << "Consonant" << endl;
+    while(k--){
+
     }
+
     return 0;   
 }
