@@ -8,12 +8,12 @@ using namespace std;
 
 int main() {    
     
-    int k;
+    int k;  
 
     cin >> k;
 
     while(k--){
-        int a; 
+        
     }
 
 
