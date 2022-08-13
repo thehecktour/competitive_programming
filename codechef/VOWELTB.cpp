@@ -7,15 +7,15 @@
 using namespace std;
 
 int main() {    
-    
-    int k;  
+
+    char k;
 
     cin >> k;
 
-    while(k--){
-        
+    if(tolower(k)=='a'||tolower(k)=='e'||tolower(k)=='i'||tolower(k)=='o'||tolower(k)=='u'){
+        cout << "Vowel" << endl;
+    }else{
+        cout << "Consonant" << endl;
     }
-
-
     return 0;   
 }
