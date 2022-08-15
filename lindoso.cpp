@@ -13,10 +13,10 @@ int main() {
     cin >> k;
 
     while(k--){
-        float a,b;
+        int a,b;
 
-        cin >> a >> b;
-        
+        cin >> a;
+
     }
 
     return 0;   
