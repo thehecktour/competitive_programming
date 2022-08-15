@@ -15,8 +15,11 @@ int main() {
     while(k--){
         float a,b;
 
-        cin >> a >> b;
-        
+        cin >> a;
+
+        b = a*60;
+
+        cout << b/30 << endl;
     }
 
     return 0;   
