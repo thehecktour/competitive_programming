@@ -7,31 +7,34 @@
 using namespace std;
 
 int main() {    
-    
+
     int k;
 
     cin >> k;
 
     while(k--){
         int a,b;
-        bool lindo = false;
-        cin >> a >> b;
-        while(a<b){
-            
-            if(a%2!=0){
-                a++;
+
+        cin >> a;
+
+        int contador = 0;
+
+        while(a>0){
+            if(a>=100){
+                a-=100;
+                contador++;
             }else{
-                a+=2;
+                contador++;
+                a--;
             }
         }
 
-        cout << "A: " << a << endl;
-
-        if(a==b){
-            cout << "YES" << endl;
+        if(contador>10){
+            cout << -1 << endl;
         }else{
-            cout << "NO" << endl;
+            cout << contador << endl;
         }
+
     }
 
     return 0;   
