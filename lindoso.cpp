@@ -7,16 +7,31 @@
 using namespace std;
 
 int main() {    
-
+    
     int k;
 
     cin >> k;
 
     while(k--){
         int a,b;
+        bool lindo = false;
+        cin >> a >> b;
+        while(a<b){
+            
+            if(a%2!=0){
+                a++;
+            }else{
+                a+=2;
+            }
+        }
 
-        cin >> a;
+        cout << "A: " << a << endl;
 
+        if(a==b){
+            cout << "YES" << endl;
+        }else{
+            cout << "NO" << endl;
+        }
     }
 
     return 0;   
