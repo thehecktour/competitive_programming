@@ -6,18 +6,7 @@
 
 using namespace std;
 
-int main() {    
-    
-    string f;
-
-    cin >> f;
-
-    if(f[f.length()-1]%2==0){
-        cout << 0 << endl;
-    }else{
-        cout << 1 << endl;
-    }
-
-
+int main() {  
+       
     return 0;   
 }
