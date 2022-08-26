@@ -8,6 +8,21 @@ using namespace std;
 
 int main() {    
 
+    int k;
 
+    cin >> k;
+
+    while(k--){
+        int a,b,c,d;
+
+        cin >> a >> b >> c >> d;
+
+        if((a+c)>=(b+d)){
+            cout <<"N" << endl;
+        }else{
+            cout << "S" << endl;
+        }
+
+    }
     return 0;   
 }
