@@ -9,19 +9,11 @@ using namespace std;
 int main() {    
 
     int k;
-
     cin >> k;
 
     while(k--){
-        int a,b,c,d;
+        int a,b,c,d,e;
 
-        cin >> a >> b >> c >> d;
-
-        if((a+c)>=(b+d)){
-            cout <<"N" << endl;
-        }else{
-            cout << "S" << endl;
-        }
 
     }
     return 0;   
