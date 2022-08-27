@@ -12,13 +12,11 @@ int main() {
     cin >> k;
 
     while(k--){
-        int a,b,c,d;
+        int a,b;
 
-        cin >> a >> b >> c >> d;
+        cin >> a >> b;
 
-        cout << max((b*7),((a*c)+(d*(7-a)))) << endl;
-        
+        cout << ((b*b)/(2*a)) << endl;
     }
-    
     return 0;   
 }
