@@ -14,16 +14,13 @@ int main() {
 
     while(k--){
         int a,b,c,d;
-        cin >> a >> b >> c >> d;
+        cin >> a >> b;
 
-        if((a+(c*10))<((b+(d*10)))){
-            cout << "Chef" << endl;
-        }else if((a+(c*10))>((b+(d*10)))){
-            cout << "Chefina" << endl;
+        if((a+b)%2==0){
+            cout << "Bob" << endl;
         }else{
-            cout << "Draw" << endl;
+            cout << "Alice" << endl;
         }
-
     }
 
     return 0;   
