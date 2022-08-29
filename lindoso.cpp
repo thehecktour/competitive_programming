@@ -8,21 +8,7 @@ using namespace std;
 
 int main() {    
 
-    double a,b;
-    char c;
 
-    cin >> a >> b >> c;
-
-    if(c=='/'){
-        cout << fixed << setprecision(1);
-        cout << a/b << endl;
-    }else if(c=='+'){
-        cout << a+b << endl;
-    }else if(c=='-'){
-        cout << a-b << endl;
-    }else if(c=='*'){
-        cout << a*b << endl;
-    }
 
     return 0;   
 }
