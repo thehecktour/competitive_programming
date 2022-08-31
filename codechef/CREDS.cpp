@@ -16,7 +16,7 @@ int main() {
 
         cin >> a >> b >> c;
 
-        cout << ((b-c)*a) << endl;
+        cout << ((a*4)+(b*2)+0) << endl;
     }
 
     return 0;   
